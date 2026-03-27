@@ -10,8 +10,6 @@ const timelineContainer = document.querySelector('.timeline');
 const skillsGrid = document.querySelector('.skills-grid');
 const projectsGrid = document.querySelector('.projects-grid');
 const contactForm = document.getElementById('contact-form');
-const cursorDot = document.getElementById('cursor-dot');
-const cursorOutline = document.getElementById('cursor-outline');
 
 // =================================================================
 // DATA
@@ -43,26 +41,18 @@ const skillsData = [
 
 const projectsData = [
     {
-        title: "Project One",
-        image: "https://via.placeholder.com/400x200",
-        description: "A brief description of the project, its purpose, and the value it brings.",
+        title: "Mindcare",
+        image: "old_portfolio/assets/mindcare-screenshot.png",
+        description: "A sophisticated mental wellness platform designed to help users achieve mindfulness through guided experiences and a serene interface.",
         tech: ["HTML", "CSS", "JavaScript"],
-        liveUrl: "#",
-        githubUrl: "#"
+        liveUrl: "https://mind-care-96.vercel.app",
+        githubUrl: "https://github.com/Edm-ond"
     },
     {
-        title: "Project Two",
+        title: "AgriMarket",
         image: "https://via.placeholder.com/400x200",
-        description: "A brief description of the project, its purpose, and the value it brings.",
-        tech: ["JavaScript", "API", "Node.js"],
-        liveUrl: "#",
-        githubUrl: "#"
-    },
-    {
-        title: "Project Three",
-        image: "https://via.placeholder.com/400x200",
-        description: "A brief description of the project, its purpose, and the value it brings.",
-        tech: ["Python", "Flask", "SQL"],
+        description: "A digital agriculture platform focused on smarter trade decisions, trusted connections, and better market access for farmers and buyers.",
+        tech: ["AI", "Marketplace", "Logistics"],
         liveUrl: "#",
         githubUrl: "#"
     }
@@ -79,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initNavbarBehavior();
     initMobileMenu();
-    initCustomCursor();
     initHeroCanvas();
     initContactForm();
 });
@@ -218,37 +207,6 @@ function initMobileMenu() {
     });
 }
 
-// --- Custom Cursor ---
-function initCustomCursor() {
-    window.addEventListener('mousemove', e => {
-        const posX = e.clientX;
-        const posY = e.clientY;
-
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
-
-    document.querySelectorAll('a, button, .skill-card').forEach(el => {
-        el.addEventListener('mouseover', () => {
-            cursorOutline.style.width = '60px';
-            cursorOutline.style.height = '60px';
-            cursorOutline.style.borderWidth = '3px';
-            cursorOutline.style.borderColor = 'var(--color-secondary)';
-        });
-        el.addEventListener('mouseout', () => {
-            cursorOutline.style.width = '40px';
-            cursorOutline.style.height = '40px';
-            cursorOutline.style.borderWidth = '2px';
-            cursorOutline.style.borderColor = 'var(--color-primary)';
-        });
-    });
-}
-
 // --- Hero Canvas Animation ---
 function initHeroCanvas() {
     const ctx = heroCanvas.getContext('2d');
@@ -321,9 +279,12 @@ function initHeroCanvas() {
 function initContactForm() {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Here you would typically send the form data to a server
-        // For this example, we'll just show an alert.
-        alert('Thank you for your message!');
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const subject = `New message from ${name}`;
+        const body = `${message}%0D%0A%0D%0AFrom: ${name}%0D%0AEmail: ${email}`;
+        window.location.href = `mailto:edmon.digihub@gmail.com?subject=${subject}&body=${body}`;
         contactForm.reset();
     });
 }
