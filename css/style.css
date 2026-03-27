@@ -46,7 +46,8 @@ p { color: var(--muted-text); }
 .card {
     border-radius: var(--radius);
     border: none;
-    box-shadow: none !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .about-card,
@@ -110,6 +111,7 @@ p { color: var(--muted-text); }
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
+    padding: 1.4rem;
 }
 
 /* Remove card/glass look ONLY in About */
@@ -128,7 +130,6 @@ p { color: var(--muted-text); }
 }
 
 .about .about-hero {
-    padding: 1.6rem;
     position: relative;
     overflow: hidden;
 }
@@ -187,7 +188,6 @@ p { color: var(--muted-text); }
 }
 
 .about .about-value {
-    padding: 1.4rem;
     margin-top: 1.05rem;
 }
 
@@ -398,7 +398,6 @@ p { color: var(--muted-text); }
 .about .about-stack,
 .about .about-focus,
 .about .about-cta {
-    padding: 1.4rem;
 }
 
 .about .about-principles {
@@ -998,6 +997,12 @@ p { color: var(--muted-text); }
 .btn.secondary {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(0, 191, 255, 0.25);
+}
 }
 
 .btn:hover {
