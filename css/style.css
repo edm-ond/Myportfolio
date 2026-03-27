@@ -45,7 +45,7 @@ p { color: var(--muted-text); }
 .social-stat-card,
 .card {
     border-radius: var(--radius);
-    border: 1px solid var(--border-subtle);
+    border: none;
     box-shadow: none !important;
 }
 
@@ -546,24 +546,11 @@ p { color: var(--muted-text); }
     }
 }
 
-@media (max-width: 768px) {
-    .about .about-path {
-        padding-left: 1.9rem;
-        gap: 0.95rem;
-    }
-
-    .about .about-path::before {
-        left: 0.85rem;
-    }
-
-    .about .about-node::before {
-        left: -1.9rem;
-    }
-
-    .about .about-node::after {
-        left: -1.05rem;
-        width: 1.05rem;
-    }
+.skills-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
 /* Enhanced Navbar Styles */
