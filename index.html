@@ -11,8 +11,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="scroll-progress"></div>
+    <div id="particles-js"></div>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
     <nav class="navbar">
-        <a class="logo" href="#home">EDM</a>
+        <a class="logo premium-logo" href="#home">
+            <img src="1.jpg" class="nav-pfp" alt="Edmond">
+            EDMOND</span>
+        </a>
         <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
             <span></span>
             <span></span>
@@ -33,127 +43,386 @@
     <header id="home" class="hero">
         <div class="hero-bg-shape shape-1"></div>
         <div class="hero-bg-shape shape-2"></div>
-        <div class="container hero-content">
+        <div class="container hero-content section-reveal">
             <div class="hero-text">
-                <p class="hero-kicker">Web Developer • Creator • Problem Solver</p>
-                <h1>Hi, I am Edmond.<br>I build clean, fast, human-centered web experiences.</h1>
+                <div class="greeting">
+                    <span class="wave">👋</span>
+                    <span class="typing-text">Hello, I'm</span>
+                </div>
+                <h1>Edmond.</h1>
+                <p class="hero-kicker">Web Developer • Blockchain • Creator • Problem Solver</p>
+                <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem;">I build clean, fast, human-centered web experiences.</h2>
                 <p class="hero-description">Based in Kenya, I design and build digital products that are useful, modern, and practical.</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn primary">View Projects</a>
                     <a href="#contact" class="btn secondary">Contact Me</a>
                 </div>
             </div>
-            <div class="hero-image-wrap">
-                <img src="1.jpg" alt="Portrait of Edmond" class="hero-image">
+            <div class="profile-container">
+                <div class="profile-wrapper">
+                    <div class="profile-glow"></div>
+                    <div class="profile-circle"></div>
+                    <div class="profile-image">
+                        <img src="1.jpg" alt="Portrait of Edmond">
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="about" class="about section-block">
+    <section id="about" class="about section-block section-reveal">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <article class="glass-card">
-                    <h3>Who I Am</h3>
-                    <p>I am Edmond, a 19-year-old tech student and builder from Siaya, Kenya. I enjoy turning ideas into products using code, thoughtful design, and consistent iteration.</p>
-                </article>
-                <article class="glass-card">
-                    <h3>What I Focus On</h3>
-                    <ul>
-                        <li>Web interfaces that feel smooth and intentional</li>
-                        <li>Useful products around education and wellness</li>
-                        <li>Practical deployment and performance</li>
+
+            <div class="about-path" role="list">
+                <article class="about-node about-card" role="listitem">
+                    <div class="about-node-head">
+                        <span class="about-node-kicker">Start • Identity / Intro</span>
+                        <h3>Edmond — Web Developer / Product Builder</h3>
+                    </div>
+                    <div class="about-node-media" aria-hidden="true">
+                        <svg class="about-illus" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <defs>
+                                <linearGradient id="g-id" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="rgba(0,191,255,0.95)"/>
+                                    <stop offset="1" stop-color="rgba(124,77,255,0.85)"/>
+                                </linearGradient>
+                                <radialGradient id="rg-id" cx="35%" cy="25%" r="70%">
+                                    <stop offset="0" stop-color="rgba(255,255,255,0.35)"/>
+                                    <stop offset="1" stop-color="rgba(255,255,255,0)"/>
+                                </radialGradient>
+                            </defs>
+                            <rect x="0" y="0" width="320" height="200" rx="22" fill="rgba(255,255,255,0.04)"/>
+                            <circle cx="112" cy="92" r="58" fill="url(#g-id)" opacity="0.9"/>
+                            <circle cx="152" cy="64" r="70" fill="url(#rg-id)" opacity="0.55"/>
+                            <path d="M76 148c22-18 46-27 72-27 29 0 55 11 78 34" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M214 44l22 0" stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M236 44l0 22" stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <p>Based in Kenya. I build clean, fast, human-centered web experiences and the systems behind them.</p>
+                    <ul class="about-node-points">
+                        <li><strong>North star:</strong> clarity, speed, and real-world usefulness.</li>
+                        <li><strong>Style:</strong> mobile-first, performance-aware, maintainable code.</li>
                     </ul>
                 </article>
+
+                <article class="about-node about-card" role="listitem">
+                    <div class="about-node-head">
+                        <span class="about-node-kicker">Step 2 • Value Proposition</span>
+                        <h3>From messy requirements to clean flows</h3>
+                    </div>
+                    <div class="about-node-media" aria-hidden="true">
+                        <svg class="about-illus" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <defs>
+                                <linearGradient id="g-val" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="rgba(0,191,255,0.85)"/>
+                                    <stop offset="1" stop-color="rgba(30,144,255,0.85)"/>
+                                </linearGradient>
+                                <linearGradient id="g-val2" x1="1" y1="0" x2="0" y2="1">
+                                    <stop offset="0" stop-color="rgba(124,77,255,0.78)"/>
+                                    <stop offset="1" stop-color="rgba(0,191,255,0.55)"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="0" y="0" width="320" height="200" rx="22" fill="rgba(255,255,255,0.04)"/>
+                            <path d="M58 138c34-54 78-80 132-80 24 0 48 5 72 16" fill="none" stroke="url(#g-val)" stroke-width="6" stroke-linecap="round"/>
+                            <path d="M86 150c22-34 54-52 96-52 30 0 59 10 86 30" fill="none" stroke="url(#g-val2)" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+                            <circle cx="58" cy="138" r="9" fill="rgba(255,255,255,0.6)"/>
+                            <circle cx="190" cy="58" r="10" fill="rgba(255,255,255,0.55)"/>
+                            <circle cx="262" cy="74" r="8" fill="rgba(255,255,255,0.42)"/>
+                        </svg>
+                    </div>
+                    <p>I turn ambiguous ideas into stable UI, clear journeys, and deployable products.</p>
+                    <ul class="about-node-points">
+                        <li><strong>For:</strong> startups, creators, and small teams shipping utility tools.</li>
+                        <li><strong>Outcome:</strong> faster iteration, fewer UX bugs, and better conversion.</li>
+                    </ul>
+                </article>
+
+                <article class="about-node about-card" role="listitem">
+                    <div class="about-node-head">
+                        <span class="about-node-kicker">Step 3 • Skills / Stack</span>
+                        <h3>Build stack</h3>
+                    </div>
+                    <div class="about-node-media" aria-hidden="true">
+                        <svg class="about-illus" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <defs>
+                                <linearGradient id="g-skill" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="rgba(30,144,255,0.9)"/>
+                                    <stop offset="1" stop-color="rgba(124,77,255,0.75)"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="0" y="0" width="320" height="200" rx="22" fill="rgba(255,255,255,0.04)"/>
+                            <g opacity="0.95">
+                                <rect x="54" y="56" width="212" height="28" rx="12" fill="rgba(255,255,255,0.10)"/>
+                                <rect x="54" y="92" width="168" height="28" rx="12" fill="rgba(255,255,255,0.08)"/>
+                                <rect x="54" y="128" width="190" height="28" rx="12" fill="rgba(255,255,255,0.06)"/>
+                                <rect x="54" y="56" width="144" height="28" rx="12" fill="url(#g-skill)" opacity="0.85"/>
+                                <rect x="54" y="92" width="106" height="28" rx="12" fill="url(#g-skill)" opacity="0.65"/>
+                                <rect x="54" y="128" width="124" height="28" rx="12" fill="url(#g-skill)" opacity="0.55"/>
+                            </g>
+                            <circle cx="262" cy="56" r="10" fill="rgba(255,255,255,0.30)"/>
+                        </svg>
+                    </div>
+                    <ul class="about-node-points">
+                        <li><strong>Core:</strong> HTML, CSS, JavaScript</li>
+                        <li><strong>Working with:</strong> Flutter, Git/GitHub, Vercel deploys</li>
+                        <li><strong>Exploring:</strong> AI-assisted UX patterns, blockchain fundamentals</li>
+                    </ul>
+                </article>
+
+                <article class="about-node about-card" role="listitem">
+                    <div class="about-node-head">
+                        <span class="about-node-kicker">Step 4 • Projects / Proof</span>
+                        <h3>Proof in shipped work</h3>
+                    </div>
+                    <div class="about-node-media" aria-hidden="true">
+                        <svg class="about-illus" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <defs>
+                                <linearGradient id="g-proof" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="rgba(0,191,255,0.9)"/>
+                                    <stop offset="1" stop-color="rgba(124,77,255,0.8)"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="0" y="0" width="320" height="200" rx="22" fill="rgba(255,255,255,0.04)"/>
+                            <rect x="58" y="52" width="204" height="118" rx="18" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)"/>
+                            <path d="M82 138c22-18 44-28 66-28 18 0 36 6 54 18 20 13 40 19 62 19" fill="none" stroke="url(#g-proof)" stroke-width="5" stroke-linecap="round"/>
+                            <circle cx="112" cy="110" r="5" fill="rgba(255,255,255,0.60)"/>
+                            <circle cx="170" cy="116" r="5" fill="rgba(255,255,255,0.52)"/>
+                            <circle cx="230" cy="127" r="5" fill="rgba(255,255,255,0.44)"/>
+                            <path d="M236 76l10 10" stroke="rgba(255,255,255,0.42)" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M246 76l-10 10" stroke="rgba(255,255,255,0.42)" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <ul class="about-node-points">
+                        <li><strong>Mindcare:</strong> calm wellness UX with guided experiences.</li>
+                        <li><strong>AgriMarket:</strong> live market data + AI advisor + marketplace + location-aware logistics.</li>
+                        <li><strong>Systems:</strong> responsive UI, data-driven screens, PWA/service worker basics.</li>
+                    </ul>
+                </article>
+
+                <article class="about-node about-card" role="listitem">
+                    <div class="about-node-head">
+                        <span class="about-node-kicker">Step 5 • Process / How I Work</span>
+                        <h3>How I ship</h3>
+                    </div>
+                    <div class="about-node-media" aria-hidden="true">
+                        <svg class="about-illus" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <defs>
+                                <linearGradient id="g-proc" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="rgba(30,144,255,0.85)"/>
+                                    <stop offset="1" stop-color="rgba(0,191,255,0.65)"/>
+                                </linearGradient>
+                                <linearGradient id="g-proc2" x1="1" y1="0" x2="0" y2="1">
+                                    <stop offset="0" stop-color="rgba(124,77,255,0.78)"/>
+                                    <stop offset="1" stop-color="rgba(30,144,255,0.45)"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="0" y="0" width="320" height="200" rx="22" fill="rgba(255,255,255,0.04)"/>
+                            <g opacity="0.95">
+                                <circle cx="86" cy="102" r="22" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.16)"/>
+                                <circle cx="160" cy="102" r="22" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)"/>
+                                <circle cx="234" cy="102" r="22" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+                                <path d="M108 102h30" stroke="url(#g-proc)" stroke-width="6" stroke-linecap="round"/>
+                                <path d="M182 102h30" stroke="url(#g-proc2)" stroke-width="6" stroke-linecap="round"/>
+                                <path d="M86 102l8-8" stroke="rgba(255,255,255,0.42)" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M160 102l8-8" stroke="rgba(255,255,255,0.36)" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M234 102l8-8" stroke="rgba(255,255,255,0.30)" stroke-width="3" stroke-linecap="round"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <ul class="about-node-points">
+                        <li><strong>1) Map the flow:</strong> users, screens, and success criteria.</li>
+                        <li><strong>2) Build small:</strong> ship a tight MVP, then iterate.</li>
+                        <li><strong>3) Keep it fast:</strong> performance, accessibility, and readable code.</li>
+                        <li><strong>4) Reduce risk:</strong> boring architecture, clear states, fewer surprises.</li>
+                    </ul>
+                </article>
+
+                <article class="about-node about-card" role="listitem">
+                    <div class="about-node-head">
+                        <span class="about-node-kicker">Step 6 • Current Focus</span>
+                        <h3>What I’m focused on now</h3>
+                    </div>
+                    <div class="about-node-media" aria-hidden="true">
+                        <svg class="about-illus" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <defs>
+                                <linearGradient id="g-focus" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="rgba(124,77,255,0.86)"/>
+                                    <stop offset="1" stop-color="rgba(0,191,255,0.62)"/>
+                                </linearGradient>
+                                <radialGradient id="rg-focus" cx="50%" cy="52%" r="62%">
+                                    <stop offset="0" stop-color="rgba(255,255,255,0.28)"/>
+                                    <stop offset="1" stop-color="rgba(255,255,255,0)"/>
+                                </radialGradient>
+                            </defs>
+                            <rect x="0" y="0" width="320" height="200" rx="22" fill="rgba(255,255,255,0.04)"/>
+                            <circle cx="160" cy="104" r="62" fill="url(#g-focus)" opacity="0.8"/>
+                            <circle cx="160" cy="104" r="46" fill="rgba(255,255,255,0.06)"/>
+                            <circle cx="160" cy="104" r="28" fill="rgba(255,255,255,0.06)"/>
+                            <circle cx="160" cy="104" r="84" fill="url(#rg-focus)" opacity="0.55"/>
+                            <path d="M160 56v18" stroke="rgba(255,255,255,0.42)" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M160 134v18" stroke="rgba(255,255,255,0.34)" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M112 104h18" stroke="rgba(255,255,255,0.34)" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M190 104h18" stroke="rgba(255,255,255,0.28)" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <ul class="about-node-points">
+                        <li><strong>AgriMarket MVP:</strong> live-data UI and a practical advisor flow.</li>
+                        <li><strong>Quality bar:</strong> stable UI, clean states, and production-ready polish.</li>
+                    </ul>
+                </article>
+
+                <article class="about-node about-card about-node-cta" role="listitem">
+                    <div class="about-node-head">
+                        <span class="about-node-kicker">End • Contact / CTA</span>
+                        <h3>Let’s build something useful</h3>
+                    </div>
+                    <div class="about-node-media" aria-hidden="true">
+                        <svg class="about-illus" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+                            <defs>
+                                <linearGradient id="g-cta" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="rgba(0,191,255,0.85)"/>
+                                    <stop offset="1" stop-color="rgba(124,77,255,0.85)"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="0" y="0" width="320" height="200" rx="22" fill="rgba(255,255,255,0.04)"/>
+                            <path d="M70 126c30-48 72-72 126-72 20 0 40 4 60 12" fill="none" stroke="url(#g-cta)" stroke-width="6" stroke-linecap="round"/>
+                            <circle cx="70" cy="126" r="9" fill="rgba(255,255,255,0.55)"/>
+                            <circle cx="256" cy="66" r="10" fill="rgba(255,255,255,0.45)"/>
+                            <path d="M244 66h26" stroke="rgba(255,255,255,0.30)" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M262 52l0 28" stroke="rgba(255,255,255,0.30)" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <p>If you’re building a serious web product, I’m open to collaboration and contract work.</p>
+                    <div class="about-node-actions">
+                        <a href="#projects" class="btn secondary">See Projects</a>
+                        <a href="#contact" class="btn primary">Contact Me</a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills section-block">
+    <section id="skills" class="skills section-block section-reveal">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">Technical Expertise</h2>
             <div class="skills-grid">
                 <article class="skill-card">
-                    <h3>Frontend</h3>
-                    <p>HTML, CSS, JavaScript, responsive layouts, animations.</p>
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Frontend Development</h3>
+                    <p>Crafting responsive, high-performance web interfaces with HTML, CSS, and modern JavaScript.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
                 </article>
                 <article class="skill-card">
-                    <h3>Mobile and Product</h3>
-                    <p>Flutter fundamentals, UX thinking, and product prototyping.</p>
+                    <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Mobile & Product</h3>
+                    <p>Building cross-platform mobile apps with Flutter and designing user-centric digital products.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
                 </article>
                 <article class="skill-card">
-                    <h3>Developer Workflow</h3>
-                    <p>Git/GitHub, deployment, debugging, and iterative shipping.</p>
+                    <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                    <h3>Dev Workflow</h3>
+                    <p>Efficient iteration using Git/GitHub, CI/CD, and modern debugging tools for rapid shipping.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects section-block">
+    <section id="projects" class="projects section-block section-reveal">
         <div class="container">
-            <h2 class="section-title">Real Projects</h2>
+            <h2 class="section-title">Signature Projects</h2>
             <div class="projects-grid">
                 <article class="project-card featured-project">
                     <div class="project-media">
                         <img src="assets/mindcare-screenshot.png" alt="Mindcare project screenshot">
+                        <div class="project-overlay">
+                            <span class="project-tag">Mental Wellness</span>
+                        </div>
                     </div>
                     <div class="project-body">
-                        <p class="project-tag">Featured</p>
+                        <p class="project-tag">Featured Project</p>
                         <h3>Mindcare</h3>
-                        <p>Mindcare is a mental wellness platform focused on helping users breathe, reflect, and grow through a calm, guided experience.</p>
+                        <p>A sophisticated mental wellness platform designed to help users achieve mindfulness through guided experiences and a serene interface.</p>
+                        <ul class="project-features-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Guided mindfulness sessions</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Calm and distraction-free interface</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Mobile-friendly wellness experience</li>
+                        </ul>
                         <div class="project-actions">
-                            <a href="https://mind-care-96.vercel.app" class="btn primary" target="_blank" rel="noopener noreferrer">Visit Live Site</a>
-                            <a href="https://github.com/Edm-ond" class="btn secondary" target="_blank" rel="noopener noreferrer">More on GitHub</a>
+                            <a href="https://mind-care-96.vercel.app" class="btn primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Live Site
+                            </a>
+                            <a href="https://github.com/Edm-ond" class="btn secondary" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
                         </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-body">
+                        <p class="project-tag">AgriTech</p>
+                        <h3>AgriMarket</h3>
+                        <p>A digital agriculture platform focused on smarter trade decisions, trusted connections, and better market access for farmers and buyers.</p>
+                        <ul class="project-features-list">
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Live market data for real-time pricing insights</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> AI advisor for crop and selling guidance</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Marketplace connecting buyers and sellers directly</li>
+                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Location tracking for logistics and delivery visibility</li>
+                        </ul>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact section-block">
+    <section id="contact" class="contact section-block section-reveal">
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <p class="contact-intro">Reach me directly through these channels.</p>
-            <div class="contact-grid">
-                <a class="contact-card" href="https://instagram.com/_.chapelle._" target="_blank" rel="noopener noreferrer">
+            <div class="social-links-wrap">
+                <a class="social-pill instagram" href="https://instagram.com/_.chapelle._" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-instagram"></i>
-                    <div>
-                        <h3>Instagram</h3>
-                        <p>@_.chapelle._</p>
-                    </div>
+                    <span class="social-label">Instagram</span>
+                    <span class="social-meta">Open profile</span>
                 </a>
-                <a class="contact-card" href="https://wa.me/254798150436" target="_blank" rel="noopener noreferrer">
+                <a class="social-pill whatsapp" href="https://wa.me/254798150436" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
-                    <div>
-                        <h3>WhatsApp</h3>
-                        <p>+254798150436</p>
-                    </div>
+                    <span class="social-label">WhatsApp</span>
+                    <span class="social-meta">Start chat</span>
                 </a>
-                <a class="contact-card" href="https://t.me/troybug" target="_blank" rel="noopener noreferrer">
+                <a class="social-pill telegram" href="https://t.me/troybug" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-telegram"></i>
-                    <div>
-                        <h3>Telegram</h3>
-                        <p>@troybug</p>
-                    </div>
+                    <span class="social-label">Telegram</span>
+                    <span class="social-meta">Send message</span>
                 </a>
-                <a class="contact-card" href="https://github.com/Edm-ond" target="_blank" rel="noopener noreferrer">
+                <a class="social-pill github" href="https://github.com/Edm-ond" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
-                    <div>
-                        <h3>GitHub</h3>
-                        <p>Edm-ond</p>
-                    </div>
+                    <span class="social-label">GitHub</span>
+                    <span class="social-meta">View projects</span>
                 </a>
             </div>
         </div>
     </section>
 
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
     <footer class="footer">
         <div class="container">
             <p>© 2026 Edmond. Built with focus and consistency.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/dark-mode.js"></script>
 </body>

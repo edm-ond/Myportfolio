@@ -2,6 +2,7 @@
 [data-theme="dark"] {
     --primary-color: #00BFFF;
     --secondary-color: #1E90FF;
+    --accent-color: #7C4DFF;
     --text-color: #E4E4E4;
     --background-color: #121212;
     --muted-text: #A0A0A0;
@@ -31,9 +32,18 @@ body,
 
 /* Navbar Dark Mode */
 [data-theme="dark"] .navbar {
-    background: var(--nav-bg);
+    background: rgba(11, 14, 18, 0.76);
     backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid var(--card-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+    background: rgba(11, 14, 18, 0.9);
+}
+
+[data-theme="dark"] .nav-links {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* Cards Dark Mode */
@@ -76,6 +86,11 @@ body,
     color: var(--text-color);
 }
 
+[data-theme="dark"] .nav-links a:hover {
+    color: #9ddfff;
+    background: rgba(0, 191, 255, 0.16);
+}
+
 [data-theme="dark"] .platform-link {
     background: rgba(255, 255, 255, 0.1);
     color: var(--text-color);
@@ -91,17 +106,24 @@ body,
 
 /* Dark Mode Toggle Button */
 .dark-mode-toggle {
-    background: transparent;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
     cursor: pointer;
-    padding: 0.5rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: var(--text-color);
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .dark-mode-toggle:hover {
-    transform: rotate(15deg);
+    transform: translateY(-1px) rotate(12deg);
+    background: rgba(0, 191, 255, 0.12);
+    border-color: rgba(0, 191, 255, 0.55);
 }
 
 [data-theme="dark"] .dark-mode-toggle i {
@@ -113,8 +135,8 @@ body,
 [data-theme="dark"] .project-card:hover,
 [data-theme="dark"] .skill-card:hover,
 [data-theme="dark"] .social-stat-card:hover {
-    box-shadow: 0 8px 30px rgba(0, 191, 255, 0.2);
-    border-color: var(--primary-color);
+    box-shadow: inherit;
+    border-color: inherit;
 }
 
 /* Gradient Effects Dark Mode */
@@ -139,10 +161,74 @@ body,
 /* Mobile Menu Dark Mode */
 @media (max-width: 768px) {
     [data-theme="dark"] .nav-links {
-        background: var(--nav-bg);
+        background: rgba(11, 14, 18, 0.95);
     }
 
     [data-theme="dark"] .hamburger span {
         background: var(--text-color);
     }
 } 
+
+/* Global dark-mode hover disable */
+@media (hover: hover) {
+    [data-theme="dark"] .btn:hover,
+    [data-theme="dark"] .nav-links a:hover,
+    [data-theme="dark"] .about-card:hover,
+    [data-theme="dark"] .project-card:hover,
+    [data-theme="dark"] .skill-card:hover,
+    [data-theme="dark"] .social-stat-card:hover,
+    [data-theme="dark"] .social-link:hover,
+    [data-theme="dark"] .dark-mode-toggle:hover {
+        transform: none !important;
+        box-shadow: none !important;
+        color: inherit !important;
+        background: inherit !important;
+        border-color: inherit !important;
+    }
+}
+
+[data-theme="dark"] .contact .social-pill {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.26);
+}
+
+[data-theme="dark"] .contact .social-pill .social-label {
+    color: #e9edf2;
+}
+
+[data-theme="dark"] .contact .social-pill .social-meta {
+    color: #a9b2bd;
+}
+
+[data-theme="dark"] .contact .social-pill.instagram {
+    border-color: rgba(225, 48, 108, 0.3);
+}
+
+[data-theme="dark"] .contact .social-pill.whatsapp {
+    border-color: rgba(37, 211, 102, 0.28);
+}
+
+[data-theme="dark"] .contact .social-pill.telegram {
+    border-color: rgba(0, 136, 204, 0.28);
+}
+
+[data-theme="dark"] .contact .social-pill.github {
+    border-color: rgba(163, 173, 184, 0.3);
+}
+
+/* About Pathway (dark mode) */
+[data-theme="dark"] .about .about-path::before {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 191, 255, 0.0),
+        rgba(0, 191, 255, 0.32) 15%,
+        rgba(124, 77, 255, 0.24) 52%,
+        rgba(30, 144, 255, 0.28) 85%,
+        rgba(30, 144, 255, 0.0)
+    );
+}
+
+[data-theme="dark"] .about .about-node::after {
+    background: rgba(255, 255, 255, 0.12);
+}

@@ -112,6 +112,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Scroll Progress Bar Logic
+    const scrollProgress = document.querySelector('.scroll-progress');
+    window.addEventListener('scroll', () => {
+        const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (window.pageYOffset / totalScroll);
+        if (scrollProgress) {
+            scrollProgress.style.transform = `scaleX(${progress})`;
+        }
+    });
+
     initMobileMenu();
 
     // Initialize particles
@@ -152,6 +162,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // Section Reveal Intersection Observer
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section-reveal').forEach(section => {
+        revealObserver.observe(section);
+    });
+
+    // Back to Top functionality
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn?.classList.add('show');
+        } else {
+            backToTopBtn?.classList.remove('show');
+        }
+    });
+
+    backToTopBtn?.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
 
 // Prevent errors from missing elements
