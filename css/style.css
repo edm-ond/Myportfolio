@@ -15,6 +15,62 @@
     --surface-border: rgba(0, 0, 0, 0.08);
     --soft-glow: 0 10px 30px rgba(0, 191, 255, 0.10);
     --soft-glow-2: 0 18px 48px rgba(124, 77, 255, 0.08);
+
+    /* Compact spacing scale */
+    --space-1: 8px;
+    --space-2: 12px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --radius: 10px;
+    --border-subtle: rgba(0, 0, 0, 0.08);
+}
+
+/* Compact + minimal global tuning */
+html { font-size: 16px; }
+
+section { padding: 4rem 0; }
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+p { color: var(--muted-text); }
+
+/* Compact cards across the app */
+.about-card,
+.project-card,
+.skill-card,
+.social-pill,
+.social-stat-card,
+.card {
+    border-radius: var(--radius);
+    border: 1px solid var(--border-subtle);
+    box-shadow: none !important;
+}
+
+.about-card,
+.project-card,
+.skill-card,
+.social-stat-card,
+.card {
+    padding: var(--space-3) !important;
+}
+
+/* Reduce oversized internal spacing in common components */
+.project-body,
+.skill-card,
+.about-card {
+    gap: var(--space-2);
+}
+
+/* Neutralize glow tokens where used */
+.navbar,
+.navbar.scrolled,
+.btn,
+.btn.primary,
+.btn.secondary {
+    box-shadow: none !important;
 }
 
 /* About (premium, clean) */
@@ -54,6 +110,21 @@
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Remove card/glass look ONLY in About */
+.about .about-hero,
+.about .about-value,
+.about .about-think,
+.about .about-stack,
+.about .about-focus,
+.about .about-cta,
+.about .about-proof,
+.about .about-node {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
 }
 
 .about .about-hero {
@@ -136,9 +207,9 @@
 /* Journey path */
 .about .about-path {
     display: grid;
-    gap: 1.05rem;
+    gap: 2rem;
     position: relative;
-    padding-left: 2.05rem;
+    padding-left: 2.1rem;
     max-width: 980px;
     margin: 0 auto;
 }
@@ -146,8 +217,8 @@
 .about .about-path::before {
     content: '';
     position: absolute;
-    top: 0.6rem;
-    bottom: 0.6rem;
+    top: 0.2rem;
+    bottom: 0.2rem;
     left: 0.95rem;
     width: 2px;
     border-radius: 99px;
@@ -163,7 +234,7 @@
 
 .about .about-node {
     position: relative;
-    padding: 1.25rem 1.25rem 1.15rem;
+    padding: 1.25rem 0.25rem 1.1rem;
     overflow: hidden;
 }
 
@@ -171,7 +242,7 @@
     content: '';
     position: absolute;
     left: -2.05rem;
-    top: 1.3rem;
+    top: 0.35rem;
     width: 0.85rem;
     height: 0.85rem;
     border-radius: 999px;
@@ -183,7 +254,7 @@
     content: '';
     position: absolute;
     left: -1.18rem;
-    top: 1.72rem;
+    top: 0.78rem;
     width: 1.05rem;
     height: 2px;
     border-radius: 99px;
@@ -207,6 +278,11 @@
 .about .about-node h4 {
     font-size: 1.15rem;
     line-height: 1.25;
+}
+
+.about .about-node h3 {
+    font-size: 1.25rem;
+    line-height: 1.2;
 }
 
 .about .about-node p {
@@ -234,11 +310,11 @@
 .about .about-node-media {
     position: absolute;
     right: 1.05rem;
-    top: 1.05rem;
+    top: 0.15rem;
     width: min(240px, 42%);
     aspect-ratio: 16 / 10;
     pointer-events: none;
-    opacity: 0.92;
+    opacity: 0.78;
     z-index: 0;
     filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.10));
 }
@@ -264,6 +340,24 @@
 .about .about-node > *:not(.about-node-media) {
     position: relative;
     z-index: 1;
+}
+
+/* Safer text gutters so nothing gets clipped */
+.about .about-node,
+.about .about-hero,
+.about .about-value,
+.about .about-think,
+.about .about-stack,
+.about .about-focus,
+.about .about-cta,
+.about .about-proof {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+.about .about-node p,
+.about .about-node-points li {
+    padding-right: clamp(0rem, 10vw, 12rem);
 }
 
 /* Proof */
@@ -404,6 +498,11 @@
         max-width: 520px;
         margin: 0.85rem 0 0.25rem;
         opacity: 0.95;
+    }
+
+    .about .about-node p,
+    .about .about-node-points li {
+        padding-right: 0;
     }
 }
 

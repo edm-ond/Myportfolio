@@ -4,11 +4,12 @@
     --secondary-color: #1E90FF;
     --accent-color: #7C4DFF;
     --text-color: #E4E4E4;
-    --background-color: #121212;
+    --background-color: #0A0E12; /* Darker background */
     --muted-text: #A0A0A0;
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --card-border: rgba(255, 255, 255, 0.1);
-    --nav-bg: rgba(18, 18, 18, 0.8);
+    --card-bg: #10151A; /* Solid card background */
+    --card-border: rgba(255, 255, 255, 0.08);
+    --border-subtle-dark: rgba(255, 255, 255, 0.08);
+    --nav-bg: rgba(11, 14, 18, 0.8);
     --hover-color: #33CCFF;
 }
 
@@ -50,10 +51,11 @@ body,
 [data-theme="dark"] .about-card,
 [data-theme="dark"] .project-card,
 [data-theme="dark"] .skill-card,
-[data-theme="dark"] .social-stat-card {
+[data-theme="dark"] .social-stat-card,
+[data-theme="dark"] .card {
     background: var(--card-bg);
-    border-color: var(--card-border);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-subtle-dark);
+    box-shadow: none;
 }
 
 /* Buttons Dark Mode */
@@ -65,10 +67,6 @@ body,
 [data-theme="dark"] .btn.primary {
     background: var(--primary-color);
     color: #121212;
-}
-
-[data-theme="dark"] .btn:hover {
-    box-shadow: 0 5px 15px rgba(0, 191, 255, 0.3);
 }
 
 /* Progress Bars Dark Mode */
@@ -84,11 +82,6 @@ body,
 
 [data-theme="dark"] .nav-links a {
     color: var(--text-color);
-}
-
-[data-theme="dark"] .nav-links a:hover {
-    color: #9ddfff;
-    background: rgba(0, 191, 255, 0.16);
 }
 
 [data-theme="dark"] .platform-link {
@@ -130,15 +123,6 @@ body,
     color: #FDB813;
 }
 
-/* Hover Effects in Dark Mode */
-[data-theme="dark"] .about-card:hover,
-[data-theme="dark"] .project-card:hover,
-[data-theme="dark"] .skill-card:hover,
-[data-theme="dark"] .social-stat-card:hover {
-    box-shadow: inherit;
-    border-color: inherit;
-}
-
 /* Gradient Effects Dark Mode */
 [data-theme="dark"] .hero {
     background: linear-gradient(135deg, rgba(0,191,255,0.05) 0%, rgba(30,144,255,0.05) 100%);
@@ -169,66 +153,6 @@ body,
     }
 } 
 
-/* Global dark-mode hover disable */
-@media (hover: hover) {
-    [data-theme="dark"] .btn:hover,
-    [data-theme="dark"] .nav-links a:hover,
-    [data-theme="dark"] .about-card:hover,
-    [data-theme="dark"] .project-card:hover,
-    [data-theme="dark"] .skill-card:hover,
-    [data-theme="dark"] .social-stat-card:hover,
-    [data-theme="dark"] .social-link:hover,
-    [data-theme="dark"] .dark-mode-toggle:hover {
-        transform: none !important;
-        box-shadow: none !important;
-        color: inherit !important;
-        background: inherit !important;
-        border-color: inherit !important;
-    }
-}
-
-[data-theme="dark"] .contact .social-pill {
-    background: rgba(255, 255, 255, 0.03);
-    border-color: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.26);
-}
-
-[data-theme="dark"] .contact .social-pill .social-label {
-    color: #e9edf2;
-}
-
-[data-theme="dark"] .contact .social-pill .social-meta {
-    color: #a9b2bd;
-}
-
-[data-theme="dark"] .contact .social-pill.instagram {
-    border-color: rgba(225, 48, 108, 0.3);
-}
-
-[data-theme="dark"] .contact .social-pill.whatsapp {
-    border-color: rgba(37, 211, 102, 0.28);
-}
-
-[data-theme="dark"] .contact .social-pill.telegram {
-    border-color: rgba(0, 136, 204, 0.28);
-}
-
 [data-theme="dark"] .contact .social-pill.github {
     border-color: rgba(163, 173, 184, 0.3);
-}
-
-/* About Pathway (dark mode) */
-[data-theme="dark"] .about .about-path::before {
-    background: linear-gradient(
-        180deg,
-        rgba(0, 191, 255, 0.0),
-        rgba(0, 191, 255, 0.32) 15%,
-        rgba(124, 77, 255, 0.24) 52%,
-        rgba(30, 144, 255, 0.28) 85%,
-        rgba(30, 144, 255, 0.0)
-    );
-}
-
-[data-theme="dark"] .about .about-node::after {
-    background: rgba(255, 255, 255, 0.12);
 }
