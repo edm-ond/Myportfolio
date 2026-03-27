@@ -28,7 +28,7 @@
 /* Compact + minimal global tuning */
 html { font-size: 15px; }
 
-section { padding: 3rem 0; }
+section { padding: 3rem 2rem; }
 
 .section-title {
     font-size: 1.8rem;
