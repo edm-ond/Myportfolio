@@ -53,8 +53,8 @@ const projectsData = [
         image: "https://via.placeholder.com/400x200",
         description: "A digital agriculture platform focused on smarter trade decisions, trusted connections, and better market access for farmers and buyers.",
         tech: ["AI", "Marketplace", "Logistics"],
-        liveUrl: "#",
-        githubUrl: "#"
+        liveUrl:  "#",
+        githubUrl: "https://github.com/edm-ond"
     }
 ];
 
