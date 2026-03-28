@@ -22,10 +22,10 @@ const taglineTexts = [
 ];
 
 const timelineData = [
-    { date: "2020", title: "Started My Journey", description: "Began my journey into web development, learning the fundamentals of HTML, CSS, and JavaScript." },
-    { date: "2021", title: "Dived into Frameworks", description: "Explored modern frontend frameworks and started building more complex applications." },
-    { date: "2022", title: "Backend & Databases", description: "Expanded my skills to the backend, learning about servers, APIs, and databases." },
-    { date: "2023 - Present", title: "Professional Development", description: "Working on freelance projects and contributing to open-source, continuously learning and growing as a developer." }
+    { date: "2024", title: "Started My Journey", description: "Began my journey into web development, learning the fundamentals of HTML, CSS, and JavaScript." },
+    { date: "2025", title: "Dived into Frameworks", description: "Explored modern frontend frameworks and started building more complex applications." },
+    { date: "2025", title: "Backend & Databases", description: "Expanded my skills to the backend, learning about servers, APIs, and databases." },
+    { date: "2026 - Present", title: "Professional Development", description: "Working on freelance projects,Blockchains,Defi and contributing to open-source, continuously learning and growing as a developer." }
 ];
 
 const skillsData = [
